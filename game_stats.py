@@ -12,8 +12,8 @@ class GameStats:
         self.settings = ai_game.settings
         self.ships_left = None
 
-    # Start Alien Invasion in active state.
-        self.game_active = True
+    # Start Alien Invasion in inactive state.
+        self.game_active = False
 
         self.reset_stats()
 
