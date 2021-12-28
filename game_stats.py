@@ -12,7 +12,7 @@ class GameStats:
         self.settings = ai_game.settings
         self.ships_left = None
 
-    # Start Alien Invasion in inactive state.
+        # Start Alien Invasion in inactive state.
         self.game_active = False
 
         self.reset_stats()
@@ -20,3 +20,4 @@ class GameStats:
     def reset_stats(self):
         """Set the initial statistics."""
         self.ships_left = self.settings.ships_limit
+        self.score = 0
