@@ -99,6 +99,11 @@ class AlienInvasion:
         """Respond to bullet-alien collisions."""
         collisions = pygame.sprite.groupcollide(self.bullets, self.aliens, True, True)
 
+        if collisions:
+            for aliens in collisions.values():
+                self.stats.score += self.settings.alien_points
+            self.scoreboard.prep_score()
+
         if not self.aliens:
             # Destroy existing bullets and create new fleet.
             self.bullets.empty()
@@ -126,12 +131,14 @@ class AlienInvasion:
 
             self.stats.reset_stats()
             self.stats.game_active = True
+            self.scoreboard.prep_score()
 
             self.aliens.empty()
             self.bullets.empty()
 
             self._create_fleet()
             self.ship.center_ship()
+
             pygame.mouse.set_visible(False)
 
     def _create_alien(self, alien_position, row_position):
