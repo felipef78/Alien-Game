@@ -5,8 +5,6 @@
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 9
 	button.py,b\b\bb11c9846471193b96dddd385b09f0663f767c4e
-7
-ship.py,9\3\9340ecee47a1053da9cac4dd79f619ddb8af9d1a
 9
 	bullet.py,7\0\707ab3d9a0ac00353bb69c60871c2ac2bb56bff0
 9
